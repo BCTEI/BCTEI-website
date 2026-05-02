@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  ci:
+    name: Type Check · Lint · Build
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── Checkout ────────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── Node.js setup ───────────────────────────────────────────────────────
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # ── pnpm setup ──────────────────────────────────────────────────────────
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+          run_install: false
+
+      # ── Dependency cache ────────────────────────────────────────────────────
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_OUTPUT
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      # ── Install dependencies ─────────────────────────────────────────────────
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # ── TypeScript type check ────────────────────────────────────────────────
+      - name: Type check (tsc --noEmit)
+        run: pnpm exec tsc --noEmit
+
+      # ── Lint ─────────────────────────────────────────────────────────────────
+      - name: Lint (ESLint)
+        run: pnpm lint
+
+      # ── Build (static export) ────────────────────────────────────────────────
+      - name: Build (next build → out/)
+        run: pnpm build
+        env:
+          NODE_ENV: production
+
+      # ── Upload build artifact (optional — useful for manual download) ────────
+      - name: Upload static export artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bctei-static-export
+          path: out/
+          retention-days: 7
