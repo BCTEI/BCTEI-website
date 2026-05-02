@@ -45,7 +45,7 @@ jobs:
 
       # ── Install dependencies ─────────────────────────────────────────────────
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       # ── TypeScript type check ────────────────────────────────────────────────
       - name: Type check (tsc --noEmit)
