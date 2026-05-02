@@ -55,8 +55,8 @@ export function AboutSection() {
             {/* Features Grid */}
             <div className="grid gap-6">
               {features.map((feature, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="flex gap-4 items-start group animate-fade-in-up hover:translate-x-2 transition-transform duration-300"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >

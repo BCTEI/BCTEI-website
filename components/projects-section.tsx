@@ -39,8 +39,8 @@ export function ProjectsSection() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="text-center animate-fade-in-up hover:scale-110 transition-transform duration-300"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -64,8 +64,8 @@ export function ProjectsSection() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-500 group hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up border border-white/10 hover:border-white/30"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -74,8 +74,8 @@ export function ProjectsSection() {
               </span>
               <h3 className="text-xl font-bold mb-3">{project.title}</h3>
               <p className="text-white/70 leading-relaxed mb-6">{project.description}</p>
-              <Button 
-                variant="ghost" 
+              <Button
+                variant="ghost"
                 className="text-white hover:text-secondary hover:bg-white/10 p-0 group-hover:gap-3 transition-all"
               >
                 <span>المزيد</span>

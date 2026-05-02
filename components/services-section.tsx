@@ -40,8 +40,8 @@ export function ServicesSection() {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group text-center py-8 px-4 animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >

@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "البريد الإلكتروني",
-    value: "قريباً",
+    value: "info@bctei.ly",
     description: "راسلونا في أي وقت"
   },
   {
@@ -28,8 +28,8 @@ const contactInfo = [
   {
     icon: Clock,
     title: "ساعات العمل",
-    value: "قريباً",
-    description: "قريباً"
+    value: "09:00 ص - 03:00 م",
+    description: "الأحد إلى الخميس"
   }
 ]
 

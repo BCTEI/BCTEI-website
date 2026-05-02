@@ -40,8 +40,8 @@ export function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-white/70 hover:text-secondary transition-colors"
                   >
                     {link.label}
@@ -57,7 +57,7 @@ export function Footer() {
             <ul className="space-y-3 text-white/70">
               <li>مصراته، ليبيا</li>
               <li>وزارة الدفاع</li>
-              <li>قريباً</li>
+              <li>info@bctei.ly</li>
             </ul>
           </div>
         </div>
