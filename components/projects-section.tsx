@@ -10,19 +10,19 @@ const stats = [
 
 const projects = [
   {
-    title: "قريباً",
+    title: "soon",
     category: "تقنية",
-    description: "قريباً"
+    description: "soon"
   },
   {
-    title: "قريباً",
+    title: "soon",
     category: "صيانة",
-    description: "قريباً"
+    description: "soon"
   },
   {
-    title: "قريباً",
+    title: "soon",
     category: "تصنيع",
-    description: "قريباً"
+    description: "soon"
   }
 ]
 
