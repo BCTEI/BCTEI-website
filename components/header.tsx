@@ -9,6 +9,7 @@ const navLinks = [
   { href: "#home", label: "الرئيسية" },
   { href: "#about", label: "عن المركز" },
   { href: "#services", label: "خدماتنا" },
+  { href: "#research-departments", label: "الأقسام" },
   { href: "#projects", label: "مشاريعنا" },
   { href: "#contact", label: "تواصل معنا" },
 ]

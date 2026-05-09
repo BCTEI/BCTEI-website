@@ -35,7 +35,7 @@ export function HeroSection() {
               للتقنية والصناعات الهندسية
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-              قريباً
+              منصة وطنية للابتكار، التطوير، والتصنيع الذكي — تحويل الأفكار إلى منتجات والبحوث إلى حلول.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: '600ms' }}>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 transition-all duration-300 hover:scale-105 hover:shadow-xl">
