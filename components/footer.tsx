@@ -57,7 +57,11 @@ export function Footer() {
             <ul className="space-y-3 text-white/70">
               <li>مصراته، ليبيا</li>
               <li>وزارة الدفاع</li>
-              <li>info@bctei.ly</li>
+              <li>
+                <a href="mailto:info@bctei.ly" className="hover:text-secondary transition-colors">
+                  info@bctei.ly
+                </a>
+              </li>
             </ul>
           </div>
         </div>
